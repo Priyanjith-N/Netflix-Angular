@@ -1,0 +1,12 @@
+<app-header [userImg]="userProfileImg" [userName]="name" (eventSignOut)="signOut()"></app-header>
+
+<app-banner [bannerTittle]="(bannerDetails | async)?.original_title" [bannerOverview]="(bannerDetails | async)?.overview" [key]="bannerVideo"></app-banner>
+<app-movie-carousel [videoContents]="movies" [title]="'Popular on Netflix'"></app-movie-carousel>
+
+<app-movie-carousel [videoContents]="tvShows" [title]="'Trending TV Movies'"></app-movie-carousel>
+
+<app-movie-carousel [videoContents]="nowPlayingMovies" [title]="'Now Playing Movies'"></app-movie-carousel>
+
+<app-movie-carousel [videoContents]="popularMovies" [title]="'Popular Movies'"></app-movie-carousel>
+
+<app-movie-carousel [videoContents]="upcomingMovies" [title]="'Upcoming Movies'"></app-movie-carousel>
